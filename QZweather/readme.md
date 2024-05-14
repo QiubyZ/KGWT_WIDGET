@@ -19,3 +19,5 @@ Ini hanyalah Widget Weather Sederhana yang saya buat menggunakan Widget Maker KW
     
     ![Screenshot_2024-05-14-23-25-52-411_org.kustom.widget-edit](doc/Screenshot_2024-05-14-23-25-52-411_org.kustom.widget-edit.jpg)
    
+Video:
+https://youtu.be/fCZ9Ss3uM1A
