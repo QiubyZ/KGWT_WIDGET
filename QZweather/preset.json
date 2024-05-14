@@ -1,0 +1,108 @@
+{
+  "preset_info": {
+    "version": 14,
+    "title": "QZweather",
+    "description": "weather example",
+    "author": "qzhukhi",
+    "email": "qzhukhi@gmail.com",
+    "width": 374,
+    "height": 247,
+    "features": "WEATHER",
+    "release": 373314510,
+    "locked": false,
+    "pflags": 0
+  },
+  "preset_root": {
+    "internal_events": [
+      {
+        "action": "KUSTOM_ACTION"
+      }
+    ],
+    "internal_type": "RootLayerModule",
+    "globals_list": {
+      "icons": {
+        "index": 1,
+        "type": "TEXT",
+        "title": "icons",
+        "value": "/storage/emulated/0/ICONPACK/weather-icons/animated/"
+      },
+      "cuaca": {
+        "index": 2,
+        "type": "TEXT",
+        "title": "CUACA",
+        "description": "CUACA SAAT INI",
+        "value": "$if(ai(isday),\nif(wi(code)=WINDY, gv(icons)+wind.svg,\n    wi(code)=TORNADO, gv(icons)+tornado.svg,\n    wi(code)=BLUSTERY, gv(icons)+wind.svg,\n\n    wi(code)=TROPICAL_STORM, gv(icon)+thunder-showers-day.svg,\n    wi(code)=HURRICANE, gv(icon)+thunder-showers-day.svg,\n    wi(code)=SEVERE_THUNDERSTORMS, gv(icons)+severe-thunderstorm.svg,\n    wi(code)=THUNDERSTORMS, gv(icons)+thunderstorms.svg,\n    wi(code)=ISOLATED_THUNDERSTORMS, gv(icons)+isolated-thunderstorms-day.svg,\n    wi(code)=THUNDERSHOWERS, gv(icon)+thunder-showers-day.svg,\n    wi(code)=ISOLATED_THUNDERSHOWERS, gv(icons)+isolated-thunderstorms-day.svg,\n\n    wi(code)=MIXED_RAIN_SNOW, freezing,\n    wi(code)=MIXED_RAIN_SLEET, freezing,\n    wi(code)=MIXED_SNOW_SLEET, freezing,\n    wi(code)=FREEZING_DRIZZLE, freezing,\n    wi(code)=FREEZING_RAIN, freezing,\n    wi(code)=HAIL, freezing,\n    wi(code)=SLEET, freezing,\n    wi(code)=MIXED_RAIN_AND_HAIL, freezing,\n\n    wi(code)=DRIZZLE, gv(icons)+rainy-3-day.svg,\n    wi(code)=SHOWERS, gv(icons)+rainy-3-day.svg,\n    wi(code)=HEAVY_SHOWERS, gv(icons)+rainy-3-day.svg,\n    wi(code)=SCATTERED_SHOWERS,gv(icons)+rainy-3-day.svg ,\n\n    wi(code)=SNOW_FLURRIES, gv(icons)+snowy-3-day.svg,\n    wi(code)=LIGHT_SNOW_SHOWERS, gv(icons)+snowy-day.svg,\n    wi(code)=BLOWING_SNOW, gv(icons)+snowy-3-day.svg,\n    wi(code)=SNOW, gv(icons)+snowy-3-day.svg,\n    wi(code)=HEAVY_SNOW, gv(icons)+snowy-3-day.svg,\n    wi(code)=SCATTERED_SNOW_SHOWERS,gv(icons)+snowy-day.svg,\n    wi(code)=SNOW_SHOWERS, gv(icons)+snowy-3-day.svg,\n\n    wi(code)=DUST, gv(icons)+fog-day.svg,\n    wi(code)=FOGGY, gv(icons)+fog-day.svg,\n    wi(code)=HAZE, gv(icons)+fog-day.svg,\n    wi(code)=SMOKY, gv(icons)+fog-day.svg,\n\n    wi(code)=CLOUDY,gv(icons)+cloudy-1-day.svg,\n    wi(code)=MOSTLY_CLOUDY, gv(icons)+cloudy-1-day.svg, gv(icons)+clear-day.svg)\n    ,\nif(wi(code)=WINDY, gv(icons)+wind.svg,\n  wi(code)=TORNADO, gv(icons)+tornado.svg,\n     wi(code)=BLUSTERY, gv(icons)+wind.svg,\n\n    wi(code)=TROPICAL_STORM, gv(icon)+thunder-showers-night.svg,\n    wi(code)=HURRICANE, gv(icon)+thunder-showers-night.svg,\n    wi(code)=SEVERE_THUNDERSTORMS, gv(icons)+severe-thunderstorm.svg,\n    wi(code)=THUNDERSTORMS, gv(icons)+thunderstorms.svg,\n    wi(code)=ISOLATED_THUNDERSTORMS, gv(icons)+isolated-thunderstorms-night.svg,\n    wi(code)=THUNDERSHOWERS, gv(icon)+thunder-showers-night.svg,\n    wi(code)=ISOLATED_THUNDERSHOWERS, gv(icons)+isolated-thunderstorms-night.svg,\n\n    wi(code)=MIXED_RAIN_SNOW, freezing,\n    wi(code)=MIXED_RAIN_SLEET, freezing,\n    wi(code)=MIXED_SNOW_SLEET, freezing,\n    wi(code)=FREEZING_DRIZZLE, freezing,\n    wi(code)=FREEZING_RAIN, freezing,\n    wi(code)=HAIL, freezing,\n    wi(code)=SLEET, freezing,\n    wi(code)=MIXED_RAIN_AND_HAIL, freezing,\n\n    wi(code)=DRIZZLE, gv(icons)+rainy-3-night.svg,\n    wi(code)=SHOWERS, gv(icons)+rainy-3-night.svg,\n    wi(code)=HEAVY_SHOWERS, gv(icons)+rainy-3-night.svg,\n    wi(code)=SCATTERED_SHOWERS,gv(icons)+rainy-3-night.svg ,\n\n    wi(code)=SNOW_FLURRIES, gv(icons)+snowy-3-night.svg,\n    wi(code)=LIGHT_SNOW_SHOWERS, gv(icons)+snowy-night.svg,\n    wi(code)=BLOWING_SNOW, gv(icons)+snowy-3-night.svg,\n    wi(code)=SNOW, gv(icons)+snowy-3-night.svg,\n    wi(code)=HEAVY_SNOW, gv(icons)+snowy-3-night.svg,\n    wi(code)=SCATTERED_SNOW_SHOWERS,gv(icons)+snowy-night.svg,\n    wi(code)=SNOW_SHOWERS, gv(icons)+snowy-3-night.svg,\n\n    wi(code)=DUST, gv(icons)+fog-night.svg,\n    wi(code)=FOGGY, gv(icons)+fog-night.svg,\n    wi(code)=HAZE, gv(icons)+fog-night.svg,\n    wi(code)=SMOKY, gv(icons)+fog-night.svg,\n\n    wi(code)=CLOUDY, gv(icons)+cloudy-3-night.svg,\n\n    wi(code)=MOSTLY_CLOUDY, gv(icons)+cloudy-1-night.svg,gv(icons)+clear-night.svg)\n)$\n"
+      }
+    },
+    "config_scale_value": 93.0,
+    "viewgroup_items": [
+      {
+        "internal_type": "ShapeModule",
+        "internal_title": "BorderLuar",
+        "shape_type": "RECT",
+        "shape_width": 248.0,
+        "shape_height": 164.0,
+        "shape_corners": 14,
+        "paint_color": "#8EFFFFFF"
+      },
+      {
+        "internal_type": "ShapeModule",
+        "internal_title": "BorderDalam",
+        "shape_type": "RECT",
+        "shape_width": 234.0,
+        "shape_height": 145.0,
+        "shape_corners": 14,
+        "paint_color": "#8E4088FF",
+        "position_offset_y": 19.0
+      },
+      {
+        "internal_type": "BitmapModule",
+        "bitmap_mode": "VECTOR",
+        "bitmap_bitmap": "kfile://org.kustom.provider/bitmaps/IMG14096e4145fbac07b763a16edc434491",
+        "position_offset_x": -71.0,
+        "bitmap_svg": "kfile://org.kustom.provider/bitmaps/IMG92048a3d21618a4e909ea79adf62f100",
+        "position_offset_y": -15.0,
+        "internal_toggles": {
+          "bitmap_svg": 10
+        },
+        "internal_formulas": {
+          "bitmap_svg": "$gv(cuaca)$"
+        },
+        "bitmap_scale_mode": "CENTER_CROP",
+        "bitmap_width": 98.0,
+        "internal_title": "ICON"
+      },
+      {
+        "internal_type": "TextModule",
+        "text_expression": "$wi(cond)$ ($wi(code)$) $wi(dpoint)$°$wi(tempu)$ | $wi(fpoint)$°$wi(tempu)$\n$wi(lid)$",
+        "text_family": "kfile://org.kustom.provider/fonts/ADLaM Display.ttf",
+        "text_size": 19.0,
+        "text_size_type": "FIXED_WIDTH",
+        "internal_title": "Deskripsi",
+        "paint_color": "#FF410909",
+        "position_offset_x": 1.0,
+        "position_offset_y": 36.0
+      },
+      {
+        "internal_type": "TextModule",
+        "internal_title": "Sumber Weather",
+        "text_expression": "$wi(provider)$",
+        "text_family": "kfile://org.kustom.provider/fonts/ADLaM Display.ttf",
+        "paint_color": "#FF1EBAFC",
+        "position_offset_y": -70.0
+      },
+      {
+        "internal_type": "TextModule",
+        "text_expression": "$wi(flik)$°$wi(tempu)$",
+        "text_family": "kfile://org.kustom.provider/fonts/ADLaM Display.ttf",
+        "text_size_type": "FIT_TO_BOX",
+        "text_width": 107.0,
+        "text_height": 199.0,
+        "text_size": 36.0,
+        "text_align": "CENTER",
+        "position_offset_x": 37.0,
+        "position_offset_y": -23.0
+      }
+    ]
+  }
+}
